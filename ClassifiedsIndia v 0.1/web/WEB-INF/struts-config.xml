@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="MobilePhonesFormBean" type="com.classifiedindia.formbean.MobilePhonesFormBean"/>
+        <form-bean name="BuyerSellerInfoBean" type="com.classifiedindia.formbean.BuyerSellerInfoBean"/>
+        <form-bean name="radioActionForm" type="com.classifiedindia.formbean.RadioActionForm"/>
+        <form-bean name="UserProfileActionForm" type="com.classifiedindia.formbean.UserProfileActionForm"/>
+        <form-bean name="subcategoryActionForm" type="com.classifiedindia.formbean.SubCategoryActionForm"/>
+        <form-bean name="classifiedIndiaFormBean" type="com.classifiedindia.formbean.ClassifiedIndiaFormBean"/>
+        <form-bean name="loginActionForm" type="com.classifiedindia.formbean.LoginActionForm"/>
+        <form-bean name="userProfileActionForm" type="com.classifiedindia.formbean.userProfileActionForm"/>
+        <form-bean name="classifiedSearchForm" type="com.classifiedindia.formbean.ClassifiedSearchForm"/>
+    </form-beans>
+
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/welcome" forward="home"/>
+        <action path="/myhome" type="org.apache.struts.actions.ForwardAction" parameter="myhome" />
+        <action path="/homepage" type="org.apache.struts.actions.ForwardAction" parameter="homepage" />
+        <action path="/forward" name="MobilePhonesFormBean" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="forwardd">
+            <forward name="forwardd" path="forward"/>     
+        </action>
+        <action path="/login" name="loginActionForm" type="org.apache.struts.actions.ForwardAction" parameter="login" />
+        <action path="/categoryaction" name="subcategoryActionForm" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="categoryaction">
+        <forward name="categorypage" path="categorypage"/>
+        </action>
+        <action path="/categoryyaction" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="categoryyaction">
+        <forward name="homelifestyle" path="homelifestyle"/>
+        </action>
+        <action path="/categoryypage" type="org.apache.struts.actions.ForwardAction" parameter="categoryypage" />
+        <action path="/adminuserlogin" name="loginActionForm" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="adminuserlogin">
+        <forward name="adsuccess" path="adsuccessearch"/>
+        </action>
+        <action path="/admindetails" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="admindetails">
+        <forward name="admindetails" path="admindetails"/>
+        </action>
+
+        <action path="/paymentcategory" name="radioActionForm" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="paymentcategory">
+        <forward name="paymentcategory" path="paymentcategory"/>
+        </action>
+        <action path="/organizationDetails" name="classifiedIndiaFormBean" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="organizationDetails">
+            <forward name="organizationDetails" path="organizationDetails"/>
+         </action>
+         
+        <action path="/register" name="loginActionForm" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="register" scope="request">
+            <forward name="register" path="register"/>
+            </action>
+            <action path="/postregister" name="loginActionForm" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="postregister" scope="request">
+            <forward name="postregister" path="postregister"/>
+            <forward name="failtoregister" path="failtoregister"/>            
+            </action>
+
+         <action path="/category" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="category">
+            <forward name="category" path="category"/>
+            </action>
+             <action path="/postcategory" name="categoryActionForm"  type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="postcategory">
+            <forward name="postcategory" path="postcategory"/>
+            </action>
+
+            <action path="/subcategory" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="subcategory">
+            <forward name="subcategory" path="subcategory"/>
+            </action>
+             <action path="/postsubcategory" name="categoryActionForm"  type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="postsubcategory">
+            <forward name="postsubcategory" path="postsubcategory"/>
+            </action>
+        
+        <action input="/login.jsp" name="loginActionForm" path="/userLogin" scope="request" type="com.classifiedindia.action.LoginAction" parameter="userLogin">
+          <forward name="success" path="success"/>
+           <forward name="failure" path="failure"/>
+        </action>
+        <action input="/leftmenu.jsp" name="classifiedIndiaFormBean" path="/mydashboard" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="mydashboard">
+          <forward name="mydashboard"  path="mydashboard"/>
+        </action>
+        <action path="/guesthouses" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="guesthouses">
+          <forward name="guesthouses" path="guesthouses"/>
+          </action>
+        <action path="/businessproposal" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="businessproposal">
+            <forward name="businessproposal" path="businessproposal"/>
+        </action>
+        <action path="/holidaytimes" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="holidaytimes">
+            <forward name="holidaytimes" path="holidaytimes"/>
+            </action>
+        <action path="/culturalevents" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="culturalevents">
+            <forward name="culturalevents" path="culturalevents"/>
+            </action>
+        <action path="/escorts" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="escorts">
+            <forward name="escorts" path="escorts"/>
+            </action>
+            <action path="/insertdata" name="classifiedIndiaFormBean" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="insertdata" scope="request">
+            <forward name="insertdata" path="insertdata"/>
+            </action>
+            <action path="/hint" type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="hint">
+            <forward name="hint" path="hint"/>
+            </action>
+             <action path="/postclassifiedadvs" name="classifiedIndiaFormBean"  type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="postclassifiedadvs">
+            <forward name="postclassifiedadvs" path="postclassifiedadvs"/>
+             </action>
+        <action path="/home"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="home">
+            <forward name="home" path="home"/>
+            </action>
+            <action path="/aboutus"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="aboutus">
+            <forward name="aboutus" path="aboutus"/>
+            </action>
+            <action path="/help"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="help">
+            <forward name="help" path="help"/>
+            </action>
+            <action path="/term"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="term">
+            <forward name="term" path="term"/>
+            </action>
+            <action path="/advertise"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="advertise">
+            <forward name="advertise" path="advertise"/>
+            </action>
+            <action path="/privacy"   type="com.classifiedindia.action.ClassifiedIndiaAction" parameter="privacy">
+            <forward name="privacy" path="privacy"/>
+            </action>
+            <action input="/viewads.jsp" name="classifiedIndiaFormBean" parameter="editdata" path="/edit" scope="session" type="com.classifiedindia.action.ClassifiedIndiaAction">
+                <forward name="editdata" path="editdata"/>
+            </action>
+            <action input="/leftmenu.jsp" name="classifiedIndiaFormBean" parameter="viewads" path="/viewads" scope="session" type="com.classifiedindia.action.ClassifiedIndiaAction">
+                <forward name="viewads" path="viewads"/>          
+            </action>
+            <action input="/editdata.jsp" name="classifiedIndiaFormBean" parameter="update" path="/update" scope="session" type="com.classifiedindia.action.ClassifiedIndiaAction">
+                <forward name="update" path="update"/>            
+            </action>
+            <action input="/mydashboard.jsp" name="classifiedIndiaFormBean" parameter="mydashedit" path="/mydashedit" scope="request" type="com.classifiedindia.action.ClassifiedIndiaAction">
+                <forward name="mydashedit" path="mydashedit"/>            
+            </action>
+            <action input="/home.jsp" name="classifiedIndiaFormBean" parameter="searchResult" path="/search" scope="request" type="com.classifiedindia.action.ClassifiedIndiaAction">
+                <forward name="searchpage" path="searchpage"/>           
+            </action>
+            <action input="category/mobiles/mobilephones.jsp" name="MobilePhonesFormBean" parameter="mobilepage" path="/mobilepage" scope="request" type="com.classifiedindia.action.MobileAdsAction">
+                <forward name="sellerbuyerinfo" path="sellerbuyerinfo"/>            
+            </action>
+         <action input="category/mobiles/accessories.jsp" name="MobilePhonesFormBean" parameter="accessorypage" path="/accessorypage" scope="request" type="com.classifiedindia.action.MobileAdsAction">
+                <forward name="sellerbuyerinfo" path="sellerbuyerinfo"/>            
+            </action>
+            <action input="category/mobiles/tablets.jsp" name="MobilePhonesFormBean" parameter="tabletpage" path="/tabletpage" scope="request" type="com.classifiedindia.action.MobileAdsAction">
+                <forward name="sellerbuyerinfo" path="sellerbuyerinfo"/>            
+            </action>
+            <action input="/category/mobiles/mobilephones.jsp" name="BuyerSellerInfoBean" path="/buyerselleraction" scope="request" type="com.classifiedindia.action.buyerselleraction">
+                <forward name="buyerselleraction" path="buyerselleraction"/>
+            </action>
+            <action input="/login.jsp" name="loginActionForm" parameter="mailPassword" path="/forgotpassword" scope="request" type="com.classifiedindia.action.NewStrutsAction"/>              
+            <!--<action input="home.jsp" path="/search" name="classifiedSearchForm" type="org.apache.struts.actions.ForwardAction" parameter="searchResult" />  --> 
+        <action input="/" name="categoryActionForm" path="/registerAction" scope="session" type="com.classifiedindia.action.RegisterAction"/>
+       
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+    
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

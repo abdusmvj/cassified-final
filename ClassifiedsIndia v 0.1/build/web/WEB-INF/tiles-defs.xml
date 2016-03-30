@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+  <definition name="baseLayout" path="/layout.jsp">
+  <put name="title" value="Tiles Example" />
+  <put name="home" value="home.jsp" />
+  <put name="header" value="/header.jsp" />
+  <put name="leftmenu" value="/leftmenu.jsp" />
+  <put name="body" value="/body.jsp" />
+  <put name="footer" value="/footer.jsp" />
+  <put name="rightmenu" value="/rightmenu.jsp" />
+  </definition>
+  
+  <definition name="categoryypage" extends="baseLayout">
+  <put name="body" value="/categoryypage.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>  
+  <definition name="categorypage" extends="baseLayout">
+  <put name="body" value="/categorypage.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>  
+  <definition name="homelifestyle" extends="baseLayout">
+  <put name="body" value="/category/home-lifestyle.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="edulearning" extends="baseLayout">
+  <put name="body" value="/category/edulearning.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="community" extends="baseLayout">
+  <put name="body" value="/category/community.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="matrimonial" extends="baseLayout">
+  <put name="body" value="/category/matrimonial.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="pets" extends="baseLayout">
+  <put name="body" value="/category/pets.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="homelifestyle" extends="baseLayout">
+  <put name="body" value="/category/home-lifestyle.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="electronics" extends="baseLayout">
+  <put name="body" value="/category/electronics.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="mobiles" extends="baseLayout">
+  <put name="body" value="/category/mobiles.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="entertainment" extends="baseLayout">
+  <put name="body" value="/category/entertainment.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="propertyforsale" extends="baseLayout">
+  <put name="body" value="/category/propertyforsale.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="carsbikes" extends="baseLayout">
+  <put name="body" value="/category/carsbikes.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="realestate" extends="baseLayout">
+  <put name="body" value="/category/realestate.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="jobservices" extends="baseLayout">
+  <put name="body" value="/category/jobservices.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="services" extends="baseLayout">
+  <put name="body" value="/category/services.jsp" />
+    <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+  <definition name="paymentcategory" extends="baseLayout">
+  <put name="body" value="/paymentcategory.jsp" />
+ </definition>
+ 
+  <definition name="register" extends="baseLayout">
+  <put name="body" value="/register.jsp" />
+ </definition>
+  <definition name="postregister" extends="baseLayout">
+  <put name="body" value="/postregister.jsp" />
+ </definition>
+  <definition name="failtoregister" extends="baseLayout">
+  <put name="body" value="/failtoregister.jsp" />
+ </definition>
+  <definition name="login" extends="baseLayout">
+  <put name="body" value="/login.jsp" />
+ </definition>
+ <definition name="success" extends="baseLayout">
+  <put name="leftmenu" value="/afterloginleftmenu.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="body" value="/afterloginhome.jsp" />
+ </definition>
+ <definition name="failure" extends="baseLayout">
+  <put name="body" value="/failure.jsp" />
+ </definition>
+<definition name="myhome" extends="baseLayout">
+  <put name="leftmenu" value="/afterloginleftmenu.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="body" value="/afterloginhome.jsp" />
+ </definition>
+<definition name="viewads" extends="baseLayout">
+  <put name="leftmenu" value="/afterloginleftmenu.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="body" value="/viewads.jsp" />
+ </definition>
+
+ <definition name="mydashboard" extends="baseLayout">
+  <put name="leftmenu" value="/afterloginleftmenu.jsp" />
+  <put name="header" value="/header2.jsp" />
+  <put name="body" value="/mydashboard.jsp" />
+ </definition>
+ <definition name="mydashedit" extends="baseLayout">
+  <put name="body" value="/mydashedit.jsp" />
+ </definition>
+ <definition name="guesthouses" extends="baseLayout">
+  <put name="body" value="/guesthouses.jsp" />
+ </definition>
+ <definition name="businessproposal" extends="baseLayout">
+  <put name="body" value="/businessproposal.jsp" />
+ </definition>
+ <definition name="holidaytimes" extends="baseLayout">
+  <put name="body" value="/holidaytimes.jsp" />
+ </definition>
+ <definition name="culturalevents" extends="baseLayout">
+  <put name="body" value="/culturalevents.jsp" />
+ </definition>
+ <definition name="escorts" extends="baseLayout">
+  <put name="body" value="/escorts.jsp" />
+ </definition>
+ <definition name="insertdata" extends="baseLayout">
+  <put name="body" value="/insertdata.jsp" />
+  <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ <definition name="forward" extends="baseLayout">
+  <put name="body" value="/uploadfile.jsp" />
+  <put name="leftmenu" value="/inner-left-menu.jsp" />
+ </definition>
+ 
+<definition name="postclassifiedadvs" extends="baseLayout">
+  <put name="body" value="/postclassifiedadvs.jsp" />
+ </definition>
+<definition name="home" extends="baseLayout">
+  <put name="body" value="/home.jsp" />
+ </definition>
+ <definition name="homepage" extends="baseLayout">
+  <put name="body" value="/home.jsp" />
+  <put name="header" value="/header2.jsp" />
+ </definition>
+ <definition name="searchpage" extends="baseLayout">
+  <put name="body" value="/searchpage.jsp" />
+ </definition>
+ <definition name="aboutus" extends="baseLayout">
+  <put name="body" value="/aboutus.jsp" />
+ </definition>
+ <definition name="help" extends="baseLayout">
+  <put name="body" value="/help.jsp" />
+ </definition>
+ <definition name="term" extends="baseLayout">
+  <put name="body" value="/term.jsp" />
+ </definition>
+ <definition name="advertise" extends="baseLayout">
+  <put name="body" value="/advertise.jsp" />
+ </definition>
+ <definition name="privacy" extends="baseLayout">
+  <put name="body" value="/privacy.jsp" />
+ </definition>
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+
+
+  <definition name="detailsLayout" path="/detailslayout.jsp">
+  <put name="title" value="Tiles Example" />
+  <put name="header" value="/header.jsp" />
+  <put name="body" value="/body.jsp" />
+  <put name="footer" value="/footer.jsp" />
+  </definition>
+
+
+
+  <definition name="organizationDetails" extends="detailsLayout">
+    <put name="body" value="/organizationDetails.jsp" />
+  </definition>
+  
+
+  <!-- Amdin layout part start from here-->
+
+  <definition name="adminDetailsLayout" path="/adminlayout.jsp">
+  <put name="title" value="Tiles Example" />
+  <put name="header" value="/header.jsp" />
+  <put name="adminleftmenu" value="/adminleftmenu.jsp"/>
+  <put name="body" value="/body.jsp" />
+  <put name="footer" value="/footer.jsp" />
+  </definition>
+
+
+   <definition name="hint" extends="adminDetailsLayout">
+    <put name="body" value="/hint.jsp" />
+    </definition>
+   <definition name="admindetails" extends="adminDetailsLayout">
+    <put name="body" value="/adminuserlogin.jsp" />
+    </definition>
+    <definition name="category" extends="adminDetailsLayout">
+    <put name="body" value="/category.jsp" />
+    </definition>
+    <definition name="postcategory" extends="adminDetailsLayout">
+    <put name="body" value="/postcategory.jsp" />
+    </definition>
+   <definition name="subcategory" extends="adminDetailsLayout">
+   <put name="body" value="/subcategory.jsp" />
+   </definition>
+    <definition name="postsubcategory" extends="adminDetailsLayout">
+    <put name="body" value="/postsubcategory.jsp" />
+    </definition>
+    <definition name="adminuserlogin" extends="adminDetailsLayout">
+    <put name="body" value="/adminuserlogin.jsp" />
+    </definition>
+    <definition name="editdata" extends="baseLayout">
+  <put name="body" value="/editdata.jsp" />
+ </definition>
+ <definition name="update" extends="baseLayout">
+  <put name="body" value="/update.jsp" />
+ </definition>
+ <definition name="sellerbuyerinfo" extends="baseLayout">
+  <put name="body" value="/seller-buyer-info.jsp" />
+  <put name="leftmenu" value="/leftmenu.jsp" />
+  <put name="header" value="/header.jsp" />
+ </definition>
+<definition name="buyerselleraction" extends="baseLayout">
+  <put name="body" value="/sellerbuyeraction.jsp" />
+  <put name="leftmenu" value="/leftmenu.jsp" />
+  <put name="header" value="/header.jsp" />
+ </definition>
+</tiles-definitions>
